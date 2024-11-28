@@ -10,6 +10,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/users', userRoutes);
+app.get('/', function(_, res) {
+  res.send('/api')
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
